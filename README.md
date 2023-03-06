@@ -1,2 +1,2 @@
-# 🍺beer-fans
-This is an e-commerce website for selling different beers all around the European countries.
+# 🍺Watch-fans
+This is an e-commerce website for selling different types of watch around the European countries.
