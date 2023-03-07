@@ -1,0 +1,14 @@
+footer{
+    background-color: blue;
+    height:10vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    width:100%
+}
+
+.footText{
+    margin:0px 0px 0px 20px;
+
+}

@@ -1,4 +1,4 @@
-import React from "./React";
+import React from "react";
 import "./header.css";
 
 const Header =() =>{
@@ -6,7 +6,7 @@ const Header =() =>{
     return(
 
         <header className="header">
-
+            <h1 className= "headerText">Watch-Fans</h1>
         </header>
 
     )

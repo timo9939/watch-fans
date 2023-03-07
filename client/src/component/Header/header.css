@@ -1,3 +1,11 @@
 .header{
-    background-color: ;
+    background-color:green;
+    height:10vh;
+    display: flex;
+    align-items: center;
+}
+
+.headerText{
+    margin: 0px 0px 0px 20px;
+    
 }
