@@ -6,6 +6,11 @@ const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schema');
 const db = require('./config/connection');
 const port = process.env.PORT;
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../client/build")));
+}
+
 const server = new ApolloServer({
   typeDefs,
   resolvers,
