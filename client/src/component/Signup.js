@@ -1,4 +1,8 @@
+import React from 'react';
+import "./signup.css";
+
 const { useState } = require('react')
+
 
 function Signup() {
   const [username, setUsername] = useState('')
@@ -14,7 +18,7 @@ function Signup() {
   }
 
   return (
-    <div>
+    <div className="signUpDiv">
       <form onSubmit={signup}>
         <input
           type="text"

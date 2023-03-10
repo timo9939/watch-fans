@@ -7,29 +7,25 @@ import img03 from "../image/watch03.jpg";
 function Content() {
   return (
     <section className="contentSection">
-      <div className="box">
-        <article className=" title">
-          <img src={img01} alt="normal-watch" style={{ width: "200px" }}></img>
-          <p id="description1">Description:This is a 1920s watch</p>
-          <p id="price1">£20</p>
-        </article>
 
-        <article className="title2 title">
-          <img
-            src={img02}
-            alt="normal-watch2"
-            style={{ width: "200px", height: "300px" }}
-          ></img>
-          <p>Description:This is a 1930s watch</p>
-          <p className="price-box">£20</p>
-        </article>
+        <figure className="figure1">
+          <img src={img01} className="thumbnail"></img>
+          <figcaption>Description:This is a 1920s watch</figcaption>
+          <figcaption className="price">£20</figcaption>
+        </figure>
 
-        <article className="title3 title">
-          <img src={img03} alt="normal-watch" style={{ width: "200px" }}></img>
-          <p>Description:This is a 1940s watch</p>
-          <p className="price-box">£20</p>
-        </article>
-      </div>
+        <figure className="figure2">
+          <img src={img02} className="thumbnail"></img>
+          <figcaption>Description:This is a 1930s watch</figcaption>
+          <figcaption className="price">£20</figcaption>
+        </figure>
+
+        <figure className="figure3">
+          <img src={img03} className="thumbnail"></img>
+          <figcaption>Description:This is a 1940s watch</figcaption>
+          <figcaption className="price">£20</figcaption>
+        </figure>
+
     </section>
   );
 }

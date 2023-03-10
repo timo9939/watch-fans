@@ -1,32 +1,33 @@
 
-
-
 .contentSection{
     position: absolute;
-    top: 20vh;
+    top: 30vh;
     width: 100%;
-}
-
-
- .box{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-  
+    justify-content: space-evenly;
 }
 
-.description-box{
-color: aqua;
+.thumbnail{
+    width:300px;
+    display: flex;
 }
 
-.pirce-box{
-color: red;
-
+figure:hover{
+    scale:1.025;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px;
 }
 
-.title{
-border:1px solid black ;
-width: 300px;
-height: 60vh;
+
+
+figcaption{
+    background:black;
+    color:white;
+    padding: 5px;    
 }
+
+img{
+    height:250px;
+}
+
 
