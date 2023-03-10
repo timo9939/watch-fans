@@ -26,7 +26,7 @@ const typeDefs = gql`
     name: String
     photo: String
     description: String
-    price: Number
+    price:Float
   }
 
   type Query {
