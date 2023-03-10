@@ -13,7 +13,12 @@ const productSchema = new Schema({
       unique: true,
       match: [/@.+\..+/, 'Must match an email address!'],
     },
-    password: {
+    
+    description:
+    {
+
+    },
+    price: {
       type: String,
       required: true,
       minlength: 5,
