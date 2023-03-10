@@ -5,11 +5,14 @@ import {
   ApolloProvider,
   createHttpLink,
 } from '@apollo/client';
-import Signup from './component/Signup'
-import Content from './component/Content/Content'
 
-import Header from "./component/Header"
-import Footer from "./component/Footer"
+
+import Signup from './component/Signup';
+import Content from './component/Content/Content';
+import Header from "./component/Header";
+import Navigation from "./component/Navigation";
+import Footer from "./component/Footer";
+
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -25,6 +28,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Header/>
+      <Navigation/>
       <div className="App">
         <Signup />
         <Content />
