@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import Signup from './component/Signup'
-import Content from './component/Content/Content'
+import Content from './component/Content/content'
 
 const httpLink = createHttpLink({
   uri: '/graphql',
