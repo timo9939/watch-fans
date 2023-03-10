@@ -26,6 +26,8 @@ if (process.env.NODE_ENV === 'production') {
 const { typeDefs, resolvers } = require('./schema');
 const db = require('./config/connection');
 const port = process.env.PORT;
+
+//appollo server
 const server = new ApolloServer({
   typeDefs,
   resolvers,

@@ -11,16 +11,13 @@ const productSchema = new Schema({
       type: String,
       required: true,
       unique: true,
-      match: [/@.+\..+/, 'Must match an email address!'],
     },
-    
-    description:
-    {
-
-    },
-    price: {
+  description:{
       type: String,
       required: true,
-      minlength: 5,
+    },
+    price: {
+      type: Number,
+      required: true,
     }
   });
