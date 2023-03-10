@@ -6,7 +6,7 @@ import img03 from "../image/watch03.jpg";
 
 function Content() {
   return (
-    <section>
+    <section className="contentSection">
       <div className="box">
         <article className=" title">
           <img src={img01} alt="normal-watch" style={{ width: "200px" }}></img>

@@ -1,11 +1,18 @@
 
 
-.box{
+
+.contentSection{
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+}
+
+
+ .box{
     display: flex;
-    justify-content: space-around;
-    height: 50vh;
     align-items: center;
-    margin: 200px;
+    justify-content: space-around;
+  
 }
 
 .description-box{
