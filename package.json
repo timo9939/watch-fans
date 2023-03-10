@@ -1,7 +1,7 @@
 {
   "name": "pretendproject3",
   "version": "1.0.0",
-  "description": "A funny project 3",
+  "description": "Group Project 3 -- watch-fans",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
