@@ -6,6 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import Signup from './component/Signup'
+import Content from './component/Content/Content'
 
 import Header from "./component/Header"
 import Footer from "./component/Footer"
@@ -26,6 +27,7 @@ function App() {
       <Header/>
       <div className="App">
         <Signup />
+        <Content />
       </div>
       <Footer/>
     </ApolloProvider>
