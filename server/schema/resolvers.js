@@ -1,8 +1,10 @@
 const { Profile } = require('../models');
+const { Product } = require('../models')
 const { signToken } = require('../utils/auth.js');
 
 const resolvers = {
   Query: {
+    
     users: async () => {
       return await Profile.find()
     },
@@ -21,7 +23,13 @@ const resolvers = {
 
       const token = signToken(profile);
       return { token, profile };
-    }
+    },
+
+    products: async()=>{
+      return await Product.find()
+    },
+
+
   },
 
   Mutation: {
