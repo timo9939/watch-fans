@@ -4,6 +4,7 @@ const { signToken } = require('../utils/auth.js');
 
 const resolvers = {
   Query: {
+    
     users: async () => {
       return await Profile.find()
     },
