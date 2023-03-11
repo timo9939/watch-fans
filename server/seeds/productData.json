@@ -1,0 +1,21 @@
+[
+    {
+        "name":"Black Watch",
+        "photo":"abcd",
+        "description":"It is ancient black watch",
+        "price":"100"
+    },
+    {
+        
+        "name":"Pink Watch",
+        "photo":"hhjk",
+        "description":"It is a lady watch with pink color",
+        "price":"150"
+    },
+    {
+        "name":"Modern Watch",
+        "photo":"kdjfk",
+        "description":"It is a modern wathc that released in 2022",
+        "price":"120"
+    }
+]
