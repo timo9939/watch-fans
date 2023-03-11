@@ -4,6 +4,8 @@ import "./nav.css";
 
 const Navigation = () => {
 
+//////// modal stuff ////////////////   
+
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => {
@@ -15,6 +17,10 @@ const Navigation = () => {
     }else{
         document.body.classList.remove("active-modl")
     }
+
+////////////////////////////////////////
+
+/////////// login stuff ///////////////////
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -28,7 +34,7 @@ const Navigation = () => {
           console.log('Username', username)
           console.log('Password', password)
         }
-
+////////////////////////////////
 
     return(<>
 
