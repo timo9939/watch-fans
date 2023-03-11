@@ -1,0 +1,23 @@
+.nav-container{
+    background-color: turquoise;
+    position: absolute;
+    width: 100vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+   
+}
+
+li:hover{
+    color: blue;
+    scale: 1.25;
+    transition: 1s;
+}
