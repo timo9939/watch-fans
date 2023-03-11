@@ -24,7 +24,7 @@ const resolvers = {
       return { token, profile };
     },
 
-    product: async()=>{
+    products: async()=>{
       return await Product.find()
     },
 

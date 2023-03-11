@@ -30,7 +30,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    Products: [Product]
+    products: [Product]
   }
 #############################
 
