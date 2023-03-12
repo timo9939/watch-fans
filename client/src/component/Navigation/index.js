@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./nav.css";
 
 
-const Navigation = () => {
+const Navigation = ({currentPage, handlePageChange}) => {
 
 //////// modal stuff ////////////////   
 
@@ -40,8 +40,17 @@ const Navigation = () => {
 
         <div className="nav-container">
             <ul>
-                <li className="Home">Home</li>
-                <li className="Catagories">Catagories</li>
+                <li className={currentPage === "Home" ? 'nav-item-active' : 'nav-item'}>
+                    <a href="#Home" onClick={() => handlePageChange("Home")}>
+                        Home
+                    </a>
+                </li>
+                <li className={currentPage === "Catagories" ? 'nav-item-active' : 'nav-item'}>
+                <a href="#Catagories" onClick={() => handlePageChange("Catagories")}>
+                        Catagories
+                    </a>    
+                </li>
+                
                 <li className="Login" onClick={toggleModal}>Login</li>
             </ul>
         </div>

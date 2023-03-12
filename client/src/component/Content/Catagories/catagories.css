@@ -1,0 +1,33 @@
+*{
+    font-family: Brush Script MT;
+}
+
+
+.contentSection{
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.thumbnail{
+    width:300px;
+    display: flex;
+}
+
+figure:hover{
+    scale:1.025;
+    transition: 1s;
+    box-shadow: 5px 10px 10px 0px;
+}
+
+figcaption{
+    background:black;
+    color:gold;
+    padding: 5px;    
+}
+
+img{
+    height:250px;
+}
