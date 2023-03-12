@@ -26,11 +26,11 @@ const resolvers = {
     }
   },
 
-  // Query:{
-  //   getAllProduct:async()=>{
-  //     return await Product.find()
-  //   }
-  // },
+  Query:{
+    getAllProduct:async()=>{
+      return await Product.find()
+    }
+  },
 
   Mutation: {
     addUser: async (_, { username, email, password }) => {
