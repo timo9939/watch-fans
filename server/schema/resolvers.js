@@ -23,14 +23,14 @@ const resolvers = {
 
       const token = signToken(profile);
       return { token, profile };
-    },
-
-    products: async()=>{
-      return await Product.find()
-    },
-
-
+    }
   },
+
+  // Query:{
+  //   getAllProduct:async()=>{
+  //     return await Product.find()
+  //   }
+  // },
 
   Mutation: {
     addUser: async (_, { username, email, password }) => {
