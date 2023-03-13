@@ -8,10 +8,7 @@ import {
 
 import Content from './component/Content/Content';
 import Header from "./component/Header";
-import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
-
-
 
 const httpLink = createHttpLink({
   uri: '/graphql',
