@@ -8,10 +8,7 @@ import {
 
 import Content from './component/Content/Content';
 import Header from "./component/Header";
-import Navigation from "./component/Navigation";
 import Footer from "./component/Footer";
-
-
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -20,6 +17,7 @@ const httpLink = createHttpLink({
 const client = new ApolloClient({
   // Set up our client to execute the `authLink` middleware prior to making the request to our GraphQL API
   // link: authLink.concat(httpLink), TODO: reinstate
+  uri: '/graphql',
   cache: new InMemoryCache(),
 });
 
