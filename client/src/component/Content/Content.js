@@ -1,37 +1,33 @@
-import React from "react";
+import React, {useState} from "react";
 import "./content.css";
-import img01 from "../image/watch01.jpg";
-import img02 from "../image/watch02.jpg";
-import img03 from "../image/watch03.jpg";
-import Modal from "../Modal"
 
-
+import Home from "./Home";
+import Catagories from "./Catagories";
+import Navigation from "../Navigation";
 
 function Content() {
+
+  const renderPage = () => {
+    switch(currentPage){
+      case "Home": 
+      return <Home/>
+      case "Catagories": 
+      return <Catagories/>
+   
+    }
+  }
+  
+  const [currentPage, setCurrentPage] = useState("Home");
+  
+  const handlePageChange = (page) =>{ 
+    setCurrentPage(page);
+  }
+
   return (
-    <section className="contentSection">
-
-        <Modal/>
-
-        <figure className="figure1">
-          <img src={img01} className="thumbnail"></img>
-          <figcaption>Description:This is a 1920s watch</figcaption>
-          <figcaption className="price">£20</figcaption>
-        </figure>
-
-        <figure className="figure2">
-          <img src={img02} className="thumbnail"></img>
-          <figcaption>Description:This is a 1930s watch</figcaption>
-          <figcaption className="price">£20</figcaption>
-        </figure>
-
-        <figure className="figure3">
-          <img src={img03} className="thumbnail"></img>
-          <figcaption>Description:This is a 1940s watch</figcaption>
-          <figcaption className="price">£20</figcaption>
-        </figure>
-
-    </section>
+      <div >
+         <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
+         {renderPage()}
+      </div>
   );
 }
 

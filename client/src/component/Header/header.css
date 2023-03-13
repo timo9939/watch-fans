@@ -1,5 +1,6 @@
 .header{
-    background-color:green;
+    background-color:rgb(40, 83, 40);
+    color: white;
     height:10vh;
     display: flex;
     align-items: center;

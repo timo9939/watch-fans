@@ -6,8 +6,6 @@ import {
   createHttpLink,
 } from '@apollo/client';
 
-
-// import Signup from "./component/Signup";
 import Content from './component/Content/Content';
 import Header from "./component/Header";
 import Navigation from "./component/Navigation";
