@@ -4,6 +4,7 @@ import {ADD_USER}from"../../utils/mutation"
 import AuthService from '../utils/auth'
 import { useMutation } from '@apollo/client';
 
+
     function Signup() {
         const [modal, setModal] = useState(false);
         const [addSignUp, { error, data }] = useMutation(ADD_USER);

@@ -71,7 +71,7 @@ const Navigation = ({ currentPage, handlePageChange }) => {
                         <input type="text" className="modalInput" placeholder="username" value={username} onChange={updateUsername} />
                         <input type="email" className="modalInput" placeholder="email" value={email} onChange={updateEmail} />
                         <input type="password" className="modalInput" placeholder="password" value={password} onChange={updatePassword} />
-                        <button>Login</button>
+                        <button>Sign up</button>
                         <button className="close-modal" onClick={toggleModal}>Close</button>
                     </form>
 
