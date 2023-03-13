@@ -45,6 +45,7 @@ const Navigation = ({currentPage, handlePageChange}) => {
                         Home
                     </a>
                 </li>
+                
                 <li className={currentPage === "Catagories" ? 'nav-item-active' : 'nav-item'}>
                 <a href="#Catagories" onClick={() => handlePageChange("Catagories")}>
                         Catagories
