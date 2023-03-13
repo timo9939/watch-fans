@@ -23,13 +23,13 @@ const resolvers = {
 
       const token = signToken(profile);
       return { token, profile };
-    },
+    }
+  },
 
-    products: async()=>{
+  Query:{
+    getAllProduct:async()=>{
       return await Product.find()
-    },
-
-
+    }
   },
 
   Mutation: {
@@ -40,6 +40,9 @@ const resolvers = {
       const token = signToken(user);
       return { token }
     },
+    login: () => {
+      return {}
+    }
   },
 };
 

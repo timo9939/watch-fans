@@ -6,6 +6,7 @@ import ContentList from '../components/Content/content';
 
 // Import the query we are going to execute from its file
 import { QUERY_GETCONTENTS } from '../utils/queries';
+import {ADD_USER}from '../utils/mutation';
 
 const Home = () => {
     // Execute the query on component load
