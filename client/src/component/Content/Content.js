@@ -13,7 +13,6 @@ function Content() {
       return <Home/>
       case "Catagories": 
       return <Catagories/>
-   
     }
   }
   
