@@ -26,12 +26,22 @@ const resolvers = {
     }
   },
 
+//Test: Getting the userlogin Data
+Query :{
+  login: async () => {
+    return await Profile.find()
+  },
+},
+
+
+// Getting the Product Information
   Query:{
     getAllProduct:async()=>{
       return await Product.find()
     }
   },
 
+  //Adding the user username,email and password to the database
   Mutation: {
     addUser: async (_, { username, email, password }) => {
       const user = await Profile.create({

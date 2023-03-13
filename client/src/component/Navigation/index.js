@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./nav.css";
+import {ADD_USER}from"../../utils/mutation";
+import AuthService from "../../utils/auth";
+import { useMutation } from '@apollo/client';
 
 
 const Navigation = ({currentPage, handlePageChange}) => {
@@ -7,6 +10,8 @@ const Navigation = ({currentPage, handlePageChange}) => {
 //////// modal stuff ////////////////   
 
     const [modal, setModal] = useState(false);
+    const [addSignUp, { error, data }] = useMutation(ADD_USER);
+
 
     const toggleModal = () => {
         setModal(!modal)
@@ -29,10 +34,20 @@ const Navigation = ({currentPage, handlePageChange}) => {
     const updatePassword = e => setPassword(e.target.value)
 
 
-        const signup = e => {
+        const signup = async e => {
           e.preventDefault()
           console.log('Username', username)
           console.log('Password', password)
+
+          try {
+            const response = await addSignUp({
+              variables: { username: username, password: password },
+            });
+
+            AuthService.login(response.data.addSignUp.token);
+        } catch (e) {
+          console.error(e);
+        }
         }
 ////////////////////////////////
 
