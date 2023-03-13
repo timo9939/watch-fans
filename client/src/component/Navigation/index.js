@@ -42,43 +42,43 @@ const Navigation = ({ currentPage, handlePageChange }) => {
             console.error(e);
         }
     }
-    ////////////////////////////////
 
-    return (<>
-        <div className="nav_body">
+    return (
+        <>
+            <div className="nav_body">
 
-            <div className="nav-container">
-                <ul>
-                    <li className={currentPage === "Home" ? 'nav-item-active' : 'nav-item'}>
-                        <a href="#Home" onClick={() => handlePageChange("Home")}>
-                            Home
-                        </a>
-                    </li>
+                <div className="nav-container">
+                    <ul>
+                        <li className={currentPage === "Home" ? 'nav-item-active' : 'nav-item'}>
+                            <a href="#Home" onClick={() => handlePageChange("Home")}>
+                                Home
+                            </a>
+                        </li>
 
-                    <li className={currentPage === "Catagories" ? 'nav-item-active' : 'nav-item'}>
-                        <a href="#Catagories" onClick={() => handlePageChange("Catagories")}>
-                            Catagories
-                        </a>
-                    </li>
+                        <li className={currentPage === "Catagories" ? 'nav-item-active' : 'nav-item'}>
+                            <a href="#Catagories" onClick={() => handlePageChange("Catagories")}>
+                                Catagories
+                            </a>
+                        </li>
 
-                    <li className="Login" onClick={toggleModal}>Login</li>
-                </ul>
+                        <li className="Login" onClick={toggleModal}>Login</li>
+                    </ul>
+                </div>
+
+                {modal && (
+
+                    <form onSubmit={signup} className="modalForm">
+                        <input type="text" className="modalInput" placeholder="username" value={username} onChange={updateUsername} />
+                        <input type="email" className="modalInput" placeholder="email" value={email} onChange={updateEmail} />
+                        <input type="password" className="modalInput" placeholder="password" value={password} onChange={updatePassword} />
+                        <button>Login</button>
+                        <button className="close-modal" onClick={toggleModal}>Close</button>
+                    </form>
+
+                )}
             </div>
-
-            {modal && (
-
-                <form onSubmit={signup} className="modalForm">
-                    <input type="text" className="modalInput" placeholder="username" value={username} onChange={updateUsername} />
-                    <input type="email" className="modalInput" placeholder="email" value={email} onChange={updateEmail} />
-                    <input type="password" className="modalInput" placeholder="password" value={password} onChange={updatePassword} />
-                    <button>Login</button>
-                    <button className="close-modal" onClick={toggleModal}>Close</button>
-                </form>
-
-            )}
-        </div>
-    </>)
+        </>
+    )
 }
 
 export default Navigation;
-
