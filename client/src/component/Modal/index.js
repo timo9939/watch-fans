@@ -30,7 +30,7 @@ import { useMutation } from '@apollo/client';
           // call the gql andUser mutations
           try {
             const response = await addSignUp({
-              variables: { username: username, email: email, password: password },
+              variables: { username: username, password: password },
             });
 
             AuthService.login(response.data.addSignUp.token);
@@ -44,7 +44,7 @@ import { useMutation } from '@apollo/client';
     return(
         <>
             <button onClick={toggleModal} className="btn">
-                login
+                Signup
             </button>
             
             

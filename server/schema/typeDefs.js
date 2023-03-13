@@ -26,6 +26,10 @@ type User {
   }
 
   
+  type Query {
+    users: [User]
+  }
+  
 type Product {
  
   _id: ID
