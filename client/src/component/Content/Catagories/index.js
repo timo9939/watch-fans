@@ -1,7 +1,5 @@
 import React from "react";
 import "./catagories.css";
-
-
 import img01 from "../../image/watch01.jpg";
 import img02 from "../../image/watch02.jpg";
 import img03 from "../../image/watch03.jpg";

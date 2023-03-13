@@ -37,6 +37,7 @@ const Navigation = ({currentPage, handlePageChange}) => {
 ////////////////////////////////
 
     return(<>
+    <div className="nav_body">
 
         <div className="nav-container">
             <ul>
@@ -66,6 +67,7 @@ const Navigation = ({currentPage, handlePageChange}) => {
             </form>
         
     )}
+    </div>
         </> )
 }
 

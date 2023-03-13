@@ -1,4 +1,7 @@
 
+.nav-body{
+    z-index: 1;
+}
 
 .nav-container{
     background-image: linear-gradient(90deg, black, white);
@@ -72,8 +75,6 @@ button:hover{
     
 }
 
-/*kkkkkkkkkkkkkkkkkkkkkkkk*/
-
 li{
     list-style: none;
 }
@@ -83,13 +84,8 @@ li{
 }
 
 .nav-item-active {
-    border: 2px solid gold;
-    height: 40px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    color: white;
+    transition: 1s;
 }
 
 a{
