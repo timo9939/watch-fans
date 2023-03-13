@@ -45,7 +45,7 @@ const Navigation = ({currentPage, handlePageChange}) => {
                         Home
                     </a>
                 </li>
-                
+
                 <li className={currentPage === "Catagories" ? 'nav-item-active' : 'nav-item'}>
                 <a href="#Catagories" onClick={() => handlePageChange("Catagories")}>
                         Catagories
@@ -59,8 +59,8 @@ const Navigation = ({currentPage, handlePageChange}) => {
     {modal && (
  
             <form onSubmit={signup} className="modalForm">
-                <input type="text" placeholder="username" value={username}onChange={updateUsername}/>
-                <input type="password" placeholder="password" value={password} onChange={updatePassword}/>
+                <input type="text" className="modalInput" placeholder="username" value={username}onChange={updateUsername}/>
+                <input type="password" className="modalInput" placeholder="password" value={password} onChange={updatePassword}/>
                 <button>Login</button>
                 <button className="close-modal" onClick={toggleModal}>Close</button>
             </form>
