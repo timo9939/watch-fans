@@ -24,6 +24,7 @@ const Navigation = ({ currentPage, handlePageChange }) => {
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [loginMessage,setLoginMessage]=useState('')
 
     const updateUsername = e => setUsername(e.target.value)
     const updateEmail = e => setEmail(e.target.value)
@@ -38,10 +39,13 @@ const Navigation = ({ currentPage, handlePageChange }) => {
                 variables: { username, email, password },
             });
             AuthService.login(response.data.addUser.token);
+            console.log("account created successfuly")
+            setLoginMessage("Sign up Successfully!")
         } catch (e) {
             console.error(e);
         }
     }
+    console.log(`Username is ${AuthService.getProfile().data.username}`)
 
     return (
         <>
@@ -64,6 +68,7 @@ const Navigation = ({ currentPage, handlePageChange }) => {
                         <li className="Login" onClick={toggleModal}>Login</li>
                     </ul>
                 </div>
+                <div>{AuthService.loggedIn() ? `Welcome ${AuthService.getProfile().data.username}` : ""}</div>
 
                 {modal && (
 

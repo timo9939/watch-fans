@@ -6,7 +6,6 @@
 .nav-container{
     background-image: linear-gradient(90deg, black, white);
     color: gold;
-    position: absolute;
     width: 100vw;
     height: 5vh;
     display: flex;
