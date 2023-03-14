@@ -44,8 +44,9 @@ const Navigation = ({ currentPage, handlePageChange }) => {
         } catch (e) {
             console.error(e);
         }
+            console.log(`Username is ${AuthService.getProfile().data.username}`)
     }
-    console.log(`Username is ${AuthService.getProfile().data.username}`)
+
 
     return (
         <>
