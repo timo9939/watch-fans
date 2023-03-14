@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./nav.css";
 import { ADD_USER } from "../../utils/mutation";
+import { GETLOGIN } from "../../utils/queriesLogin";
 import AuthService from "../../utils/auth";
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery,useLazyQuery } from '@apollo/client';
+
 
 
 const Navigation = ({ currentPage, handlePageChange }) => {
@@ -10,7 +12,7 @@ const Navigation = ({ currentPage, handlePageChange }) => {
     const [modal, setModal] = useState(false);
     const [modalLogin, setModalLogin] = useState(false);
     const [addSignUp, { error, data }] = useMutation(ADD_USER);
-
+    const [tokenLogin, {error: loginError ,data:LoginData}]=useLazyQuery(GETLOGIN);
 
     const toggleModal = () => {
         setModal(!modal)
@@ -56,7 +58,7 @@ const Navigation = ({ currentPage, handlePageChange }) => {
         } catch (e) {
             console.error(e);
         }
-            console.log(`Username is ${AuthService.getProfile().data.username}`)
+            // console.log(`Username is ${AuthService.getProfile().data.username}`)
     }
 
     const handleLogin = async e => {
@@ -64,7 +66,13 @@ const Navigation = ({ currentPage, handlePageChange }) => {
 
         try {
             console.log("Login Button Clicked!")
+            const response = await tokenLogin({
+                variables: { username, email, password },
+            });
+            console.log(response)
+            AuthService.login(response.data.login.token);
             // AuthService.getToken()
+        
             console.log("account logged in!")
             
         } catch (e) {
@@ -96,6 +104,8 @@ const Navigation = ({ currentPage, handlePageChange }) => {
                     </ul>
                 </div>
                 <div>{AuthService.loggedIn() ? `Welcome ${AuthService.getProfile().data.username}` : ""}</div>
+                {AuthService.loggedIn() ? <button onClick={AuthService.logout}>Log Out</button> : ""}
+                
                
 
                 {modal && (
