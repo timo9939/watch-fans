@@ -47,6 +47,13 @@ const Navigation = ({ currentPage, handlePageChange }) => {
             console.log(`Username is ${AuthService.getProfile().data.username}`)
     }
 
+    const logOuted=async e =>{
+        e.preventDefault()
+        console.log("lougOut clcked")
+        AuthService.logout()
+
+    }
+
 
     return (
         <>
@@ -66,10 +73,12 @@ const Navigation = ({ currentPage, handlePageChange }) => {
                             </a>
                         </li>
 
-                        <li className="Login" onClick={toggleModal}>Login</li>
+                        <li className="Login" onClick={toggleModal}>Sign Up</li>
+                        <li className="Login" onClick={logOuted}>{AuthService.loggedIn() ? `Log Out` : ""}</li>
                     </ul>
                 </div>
                 <div>{AuthService.loggedIn() ? `Welcome ${AuthService.getProfile().data.username}` : ""}</div>
+               
 
                 {modal && (
 
