@@ -12,30 +12,19 @@ const resolvers = {
       const profile = await Profile.findOne({ username });
 
       if (!profile) {
-        throw new AuthenticationError('No profile with this username found!');
+        throw new Error('No profile with this username found!');
       }
 
       const correctPw = await profile.isCorrectPassword(password);
 
       if (!correctPw) {
-        throw new AuthenticationError('Incorrect password!');
+        throw new Error('Incorrect password!');
       }
 
       const token = signToken(profile);
       return { token, profile };
-    }
-  },
+    },
 
-//Test: Getting the userlogin Data
-Query :{
-  login: async () => {
-    return await Profile.find()
-  },
-},
-
-
-// Getting the Product Information
-  Query:{
     getAllProduct:async()=>{
       return await Product.find()
     }
