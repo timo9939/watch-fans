@@ -5,7 +5,7 @@ const Footer = () => {
 
     return(
         <footer className="footer">
-            <h1 className="footText">put some logo hear like git hub and shit like that</h1>
+            <h1 className="footText">put some logo hear</h1>
         </footer>
 
     )

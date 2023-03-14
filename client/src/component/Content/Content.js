@@ -15,7 +15,8 @@ function Content() {
       return <Catagories/>
     }
   }
-  
+
+
   const [currentPage, setCurrentPage] = useState("Home");
   
   const handlePageChange = (page) =>{ 
