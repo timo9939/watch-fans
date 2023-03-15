@@ -1,11 +1,12 @@
 import React from "react";
-import "./footer.css"
+import "./footer.css";
+import gh from "../image/gh.png";
 
 const Footer = () => {
 
     return(
         <footer className="footer">
-            <h1 className="footText">put some logo hear</h1>
+            <a href="https://github.com/timo9939/watch-fans"><img src={gh} className="ghLogo"/></a>
         </footer>
 
     )
