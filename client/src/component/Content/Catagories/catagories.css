@@ -33,3 +33,9 @@ figcaption{
 img{
     height:250px;
 }
+
+.figure1{
+    background:black;
+    color:gold;  
+    font-size:30px;
+}
