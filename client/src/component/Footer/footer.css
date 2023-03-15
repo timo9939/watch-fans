@@ -4,12 +4,16 @@ footer{
     height:10vh;
     display: flex;
     align-items: center;
-    position: absolute;
-    bottom: 0px;
-    width:100%
+    justify-content: center;
+    width:100%;
+    margin-top: 5vh;
 }
 
-.footText{
-    margin:0px 0px 0px 20px;
+.ghLogo{
+    height:60px;
+}
 
+.ghLogo:hover{
+    scale:1.05;
+    transition: 1s;
 }
